@@ -40,4 +40,55 @@ An app that features combining creativity, reflection, and personalization in on
 
 ## File Structure
 
-<pre> ``` 📁 diary-app │ ├── 📂 public/ │ ├── 📂 src/ │ ├── 📂 components/ │ │ ├── 📄 DiaryEntryForm.js │ │ ├── 📄 DrawingCanvas.js │ │ ├── 📄 MoodSelector.js │ │ ├── 📄 CalendarView.js │ │ ├── 📄 PasscodeLock.js │ │ ├── 📄 ThemeSwitcher.js │ │ └── 📄 GridJournalPrompts.js │ │ │ ├── 📂 pages/ │ │ ├── 📄 index.js # Home page │ │ └── 📂 diary/ │ │ ├── 📄 new.js # New entry page │ │ └── 📄 [id].js # Entry detail page │ │ │ ├── 📄 settings.js │ │ │ ├── 📂 api/ │ │ ├── 📄 entries.js │ │ ├── 📄 moods.js │ │ └── 📄 passcode.js │ │ │ ├── 📂 context/ │ │ ├── 📄 ThemeContext.js │ │ └── 📄 AuthContext.js │ │ │ ├── 📂 styles/ │ │ ├── 📄 globals.css │ │ └── 📄 themes.css │ │ │ ├── 📂 utils/ │ │ ├── 📄 storage.js │ │ └── 📄 dateUtils.js │ │ │ ├── 📂 hooks/ │ │ └── 📄 usePasscode.js │ │ │ └── 📂 config/ │ ├── 📄 index.js ├── 📄 .env.local ├── 📄 tailwind.config.js ├── 📄 next.config.js ├── 📄 package.json └── 📄 README.md ``` </pre>
+```bash
+📁 diary-app
+│
+├── 📂 public/
+│
+├── 📂 src/
+│ ├── 📂 components/
+│ │ ├── 📄 DiaryEntryForm.js
+│ │ ├── 📄 DrawingCanvas.js
+│ │ ├── 📄 MoodSelector.js
+│ │ ├── 📄 CalendarView.js
+│ │ ├── 📄 PasscodeLock.js
+│ │ ├── 📄 ThemeSwitcher.js
+│ │ └── 📄 GridJournalPrompts.js
+│ │
+│ ├── 📂 pages/
+│ │ ├── 📄 index.js # Home page
+│ │ └── 📂 diary/
+│ │ ├── 📄 new.js # New entry page
+│ │ └── 📄 [id].js # Entry detail page
+│ │
+│ ├── 📄 settings.js
+│ │
+│ ├── 📂 api/
+│ │ ├── 📄 entries.js
+│ │ ├── 📄 moods.js
+│ │ └── 📄 passcode.js
+│ │
+│ ├── 📂 context/
+│ │ ├── 📄 ThemeContext.js
+│ │ └── 📄 AuthContext.js
+│ │
+│ ├── 📂 styles/
+│ │ ├── 📄 globals.css
+│ │ └── 📄 themes.css
+│ │
+│ ├── 📂 utils/
+│ │ ├── 📄 storage.js
+│ │ └── 📄 dateUtils.js
+│ │
+│ ├── 📂 hooks/
+│ │ └── 📄 usePasscode.js
+│ │
+│ └── 📂 config/
+│
+├── 📄 index.js
+├── 📄 .env.local
+├── 📄 tailwind.config.js
+├── 📄 next.config.js
+├── 📄 package.json
+└── 📄 README.md
+```
