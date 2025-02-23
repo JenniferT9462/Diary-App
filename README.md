@@ -6,7 +6,7 @@ An app that features combining creativity, reflection, and personalization in on
 
 1. Authentication & Security
 
-    * Passcode lock or biometric security (if you want to explore mobile later).
+    * Passcode lock or login 
 2. Diary Entries
 
     * Text entries with rich text formatting.
@@ -26,16 +26,16 @@ An app that features combining creativity, reflection, and personalization in on
         * "How could I make today better?"
 5. Customization Options
 
-    * Themes and backgrounds (light/dark mode, custom color palettes).
+    * Themes and backgrounds (light/dark mode, custom color palettes). Wallpapers...
     * Font choices and sizes.
 
 ## Tech Stack
 
-- Frontend: React (or Next.js for SSR) + TailwindCSS
+- Frontend: React (or Next.js for SSR) + TailwindCSS/DaisyUI
 - Drawing Tool: Fabric.js or React-Canvas-Draw
 - Backend: Node.js + Express or Next.js API routes
-- Database: MongoDB (or Upstash for faster key-value storage)
-- Authentication: Magic Link (optional) + Passcode feature for extra security
+- Database: MongoDB 
+- Authentication: Magic Link/Auth0 + Passcode feature for extra security
 - File Storage: Cloudinary or Firebase Storage for images
 
 ## File Structure
@@ -43,10 +43,10 @@ An app that features combining creativity, reflection, and personalization in on
 ```bash
 📁 diary-app
 │
-├── 📂 public/
+├── 📂 public/         # Static assets like images, fonts, etc.
 │
 ├── 📂 src/
-│ ├── 📂 components/
+│ ├── 📂 components/    # Reusable UI components
 │ │ ├── 📄 DiaryEntryForm.js
 │ │ ├── 📄 DrawingCanvas.js
 │ │ ├── 📄 MoodSelector.js
@@ -55,40 +55,40 @@ An app that features combining creativity, reflection, and personalization in on
 │ │ ├── 📄 ThemeSwitcher.js
 │ │ └── 📄 GridJournalPrompts.js
 │ │
-│ ├── 📂 pages/
+│ ├── 📂 pages/     # Next.js pages (routes)
 │ │ ├── 📄 index.js # Home page
-│ │ └── 📂 diary/
-│ │ ├── 📄 new.js # New entry page
-│ │ └── 📄 [id].js # Entry detail page
+│ │ └── 📂 diary/   # Diary-related pages
+│ │ ├── 📄 new.js   # New entry page
+│ │ └── 📄 [id].js  # Entry detail page
 │ │
-│ ├── 📄 settings.js
+│ ├── 📄 settings.js    # Themes, passcode, preferences
 │ │
-│ ├── 📂 api/
+│ ├── 📂 api/       # API routes for backend logic
 │ │ ├── 📄 entries.js
 │ │ ├── 📄 moods.js
 │ │ └── 📄 passcode.js
 │ │
-│ ├── 📂 context/
+│ ├── 📂 context/   # React context for global state
 │ │ ├── 📄 ThemeContext.js
 │ │ └── 📄 AuthContext.js
 │ │
-│ ├── 📂 styles/
+│ ├── 📂 styles/    # Global styles and custom themes
 │ │ ├── 📄 globals.css
 │ │ └── 📄 themes.css
 │ │
-│ ├── 📂 utils/
-│ │ ├── 📄 storage.js
+│ ├── 📂 utils/     # Utility functions and helpers
+│ │ ├── 📄 storage.js   # MongoDB helpers
 │ │ └── 📄 dateUtils.js
 │ │
-│ ├── 📂 hooks/
+│ ├── 📂 hooks/     # Custom React hooks
 │ │ └── 📄 usePasscode.js
 │ │
-│ └── 📂 config/
+│ └── 📂 config/    # Configuration files 
+│   └── 📄 index.js
 │
-├── 📄 index.js
-├── 📄 .env.local
-├── 📄 tailwind.config.js
-├── 📄 next.config.js
-├── 📄 package.json
-└── 📄 README.md
+├── 📄 .env.local           # Environment variables
+├── 📄 tailwind.config.js   # TailwindCSS config
+├── 📄 next.config.js       # Next.js configuration
+├── 📄 package.json         # Project metadata and dependencies
+└── 📄 README.md            # Project documentation
 ```
